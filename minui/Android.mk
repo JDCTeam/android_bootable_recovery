@@ -68,7 +68,7 @@ ifeq ($(shell test $(PLATFORM_SDK_VERSION) -ge 26; echo $$?),0)
     LOCAL_WHOLE_STATIC_LIBRARIES += libsync_recovery
 endif
 
-LOCAL_CFLAGS += -Wall -Werror -std=c++14 -Wno-unused-private-field -O3
+LOCAL_CFLAGS += -Wall -Werror -std=c++14 -Wno-unused-private-field
 LOCAL_C_INCLUDES += $(LOCAL_PATH)/include
 LOCAL_EXPORT_C_INCLUDE_DIRS := $(LOCAL_PATH)/include
 
@@ -136,7 +136,7 @@ LOCAL_SHARED_LIBRARIES := \
     libpng \
     libbase
 
-LOCAL_CFLAGS := -Wall -Werror -std=c++14 -Wno-unused-private-field -O3
+LOCAL_CFLAGS := -Wall -Werror -std=c++14 -Wno-unused-private-field
 LOCAL_C_INCLUDES := $(LOCAL_PATH)/include
 LOCAL_EXPORT_C_INCLUDE_DIRS := $(LOCAL_PATH)/include
 include $(BUILD_SHARED_LIBRARY)
