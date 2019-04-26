@@ -57,7 +57,7 @@ ifneq ($(TW_DEVICE_VERSION),)
 else
     LOCAL_CFLAGS += -DTW_DEVICE_VERSION='"-0"'
 endif
-LOCAL_CFLAGS += -DPLATFORM_SDK_VERSION=$(PLATFORM_SDK_VERSION)
+LOCAL_CFLAGS += -DPLATFORM_SDK_VERSION=$(PLATFORM_SDK_VERSION) -O3
 
 LOCAL_SRC_FILES := \
     twrp.cpp \
@@ -589,7 +589,7 @@ ifeq ($(shell test $(PLATFORM_SDK_VERSION) -ge 24; echo $$?),0)
         rotate_logs.cpp
     LOCAL_MODULE := recovery-persist
     LOCAL_SHARED_LIBRARIES := liblog libbase
-    LOCAL_CFLAGS := -Werror
+    LOCAL_CFLAGS := -Werror -O3
     LOCAL_INIT_RC := recovery-persist.rc
     include $(BUILD_EXECUTABLE)
 endif
@@ -603,7 +603,7 @@ ifeq ($(shell test $(PLATFORM_SDK_VERSION) -ge 24; echo $$?),0)
         rotate_logs.cpp
     LOCAL_MODULE := recovery-refresh
     LOCAL_SHARED_LIBRARIES := liblog libbase
-    LOCAL_CFLAGS := -Werror
+    LOCAL_CFLAGS := -Werror -O3
     LOCAL_INIT_RC := recovery-refresh.rc
     include $(BUILD_EXECUTABLE)
 endif
@@ -612,7 +612,7 @@ endif
 # ===============================
 include $(CLEAR_VARS)
 LOCAL_CLANG := true
-LOCAL_CFLAGS := -Wall -Werror -Wno-unused-parameter
+LOCAL_CFLAGS := -Wall -Werror -Wno-unused-parameter -O3
 LOCAL_CFLAGS += -D_XOPEN_SOURCE -D_GNU_SOURCE
 
 LOCAL_MODULE_TAGS := optional
@@ -637,7 +637,7 @@ include $(BUILD_SHARED_LIBRARY)
 # =============================== (required to fix build errors in 8.1 due to use by tests)
 include $(CLEAR_VARS)
 LOCAL_CLANG := true
-LOCAL_CFLAGS := -Wall -Werror -Wno-unused-parameter
+LOCAL_CFLAGS := -Wall -Werror -Wno-unused-parameter -O3
 LOCAL_CFLAGS += -D_XOPEN_SOURCE -D_GNU_SOURCE
 
 LOCAL_MODULE_TAGS := optional
@@ -664,7 +664,8 @@ include $(CLEAR_VARS)
 LOCAL_SRC_FILES := mounts.cpp
 LOCAL_CFLAGS := \
     -Wall \
-    -Werror
+    -Werror \
+    -O3
 LOCAL_MODULE := libmounts
 LOCAL_STATIC_LIBRARIES := libbase
 include $(BUILD_STATIC_LIBRARY)
@@ -674,7 +675,7 @@ include $(BUILD_STATIC_LIBRARY)
 include $(CLEAR_VARS)
 LOCAL_SRC_FILES := \
     install.cpp
-LOCAL_CFLAGS := -Wall -Werror
+LOCAL_CFLAGS := -Wall -Werror -O3
 LOCAL_CFLAGS += -DRECOVERY_API_VERSION=$(RECOVERY_API_VERSION)
 
 ifeq ($(AB_OTA_UPDATER),true)
@@ -700,7 +701,7 @@ include $(CLEAR_VARS)
 
 LOCAL_MODULE := libaosprecovery
 LOCAL_MODULE_TAGS := eng optional
-LOCAL_CFLAGS := -std=gnu++0x
+LOCAL_CFLAGS := -std=gnu++0x -O3
 LOCAL_SRC_FILES := adb_install.cpp legacy_property_service.cpp set_metadata.cpp tw_atomic.cpp installcommand.cpp zipwrap.cpp
 LOCAL_SHARED_LIBRARIES += libc liblog libcutils libmtdutils libfusesideload libselinux libminzip
 LOCAL_CFLAGS += -DRECOVERY_API_VERSION=$(RECOVERY_API_VERSION)
@@ -732,12 +733,12 @@ ifeq ($(shell test $(PLATFORM_SDK_VERSION) -ge 26; echo $$?),0)
     LOCAL_C_INCLUDES += $(LOCAL_PATH)/otautil/include
     ifeq ($(shell test $(PLATFORM_SDK_VERSION) -gt 27; echo $$?),0)
         # Android 9.0 needs c++17 for libvintf
-        LOCAL_CPPFLAGS += -std=c++17
+        LOCAL_CPPFLAGS += -std=c++17 -O3
         # Android 9.0's libvintf also needs this library
         LOCAL_STATIC_LIBRARIES += libhidl-gen-utils
     endif
 else
-    LOCAL_CFLAGS += -DUSE_MINZIP
+    LOCAL_CFLAGS += -DUSE_MINZIP -O3
 endif
 
 include $(BUILD_SHARED_LIBRARY)
@@ -754,14 +755,14 @@ LOCAL_STATIC_LIBRARIES := \
     libcrypto_utils \
     libcrypto \
     libbase
-LOCAL_CFLAGS := -Wall -Werror
+LOCAL_CFLAGS := -Wall -Werror -O3
 include $(BUILD_STATIC_LIBRARY)
 
 # Wear default device
 # ===============================
 include $(CLEAR_VARS)
 LOCAL_SRC_FILES := wear_device.cpp
-LOCAL_CFLAGS := -Wall -Werror
+LOCAL_CFLAGS := -Wall -Werror -O3
 
 # Should match TARGET_RECOVERY_UI_LIB in BoardConfig.mk.
 LOCAL_MODULE := librecovery_ui_wear
@@ -773,7 +774,7 @@ include $(BUILD_STATIC_LIBRARY)
 include $(CLEAR_VARS)
 
 LOCAL_SRC_FILES := vr_device.cpp
-LOCAL_CFLAGS := -Wall -Werror
+LOCAL_CFLAGS := -Wall -Werror -O3
 
 # should match TARGET_RECOVERY_UI_LIB set in BoardConfig.mk
 LOCAL_MODULE := librecovery_ui_vr
