@@ -11,7 +11,7 @@ LOCAL_SRC_FILES:= \
 	../exclude.cpp \
 	../progresstracking.cpp \
 	../gui/twmsg.cpp
-LOCAL_CFLAGS:= -g -c -W -DBUILD_TWRPTAR_MAIN
+LOCAL_CFLAGS:= -g -c -W -DBUILD_TWRPTAR_MAIN -O3
 
 LOCAL_C_INCLUDES += bionic
 
@@ -53,7 +53,7 @@ LOCAL_SRC_FILES:= \
 	../exclude.cpp \
 	../progresstracking.cpp \
 	../gui/twmsg.cpp
-LOCAL_CFLAGS:= -g -c -W -DBUILD_TWRPTAR_MAIN
+LOCAL_CFLAGS:= -g -c -W -DBUILD_TWRPTAR_MAIN -O3
 
 LOCAL_C_INCLUDES += bionic
 LOCAL_SHARED_LIBRARIES := libc libtar libz
