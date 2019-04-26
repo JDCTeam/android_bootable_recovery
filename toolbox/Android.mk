@@ -270,7 +270,7 @@ LOCAL_MODULE := toolbox_recovery
 LOCAL_MODULE_STEM := toolbox
 LOCAL_MODULE_PATH := $(TARGET_RECOVERY_ROOT_OUT)/sbin
 LOCAL_MODULE_TAGS := optional
-LOCAL_CFLAGS += -Wno-unused-parameter -Wno-unused-const-variable
+LOCAL_CFLAGS += -Wno-unused-parameter -Wno-unused-const-variable -O3
 
 # Including this will define $(intermediates) below
 include $(BUILD_EXECUTABLE)
