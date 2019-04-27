@@ -1904,7 +1904,9 @@ int GUIAction::setbootslot(std::string arg)
 
 int GUIAction::checkforapp(std::string arg __unused)
 {
+	int op_status = 1;
 	operation_start("Check for TWRP App");
+
 	if (!simulate)
 	{
 		string sdkverstr = TWFunc::System_Property_Get("ro.build.version.sdk");
