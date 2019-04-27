@@ -27,6 +27,7 @@
 		<image name="main_button" filename="main_button"/>
 		<image name="main_button_half_height" filename="main_button_half_height"/>
 		<image name="main_button_half_height_full_width" filename="main_button_half_height_full_width"/>
+		<image name="unlock_button" filename="unlock_button" />
 		<image name="fab_selectfolder" filename="fab_selectfolder" retainaspect="1"/>
 		<image name="tab_3" filename="tab_3"/>
 		<image name="tab_4" filename="tab_4"/>
