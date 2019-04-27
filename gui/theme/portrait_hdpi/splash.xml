@@ -10,6 +10,7 @@
 
 	<resources>
 		<font name="font_l" filename="RobotoCondensed-Regular.ttf" size="52"/>
+		<font name="font_s" filename="RobotoCondensed-Regular.ttf" size="42"/>
 		<image name="splashlogo" filename="splashlogo" retainaspect="1"/>
 		<image name="splashteamwin" filename="splashteamwin" retainaspect="1"/>
 	</resources>
@@ -20,6 +21,7 @@
 		<variable name="background_color" value="#000000"/>
 		<variable name="header_color" value="#000000"/>
 		<variable name="accent_color" value="#777777"/>
+		<variable name="disclaimer_color" value="#850000" />
 	</variables>
 
 	<pages>
@@ -42,8 +44,13 @@
 
 			<text color="%accent_color%">
 				<font resource="font_l"/>
-				<placement x="540" y="1590" placement="5"/>
-				<text>Recovery Project %tw_version% by JDCTeam</text>
+				<placement x="540" y="1500" placement="5"/>
+				<text>TWRP %tw_version% by JDCTeam</text>
+			</text>
+			<text color="%disclaimer_color%">
+				<font resource="font_s"/>
+				<placement x="700" y="1600" placement="6"/>
+				<text>Only for S4 jflte</text>
 			</text>
 		</page>
 	</pages>
