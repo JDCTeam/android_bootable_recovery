@@ -49,7 +49,7 @@
 			</text>
 			<text color="%disclaimer_color%">
 				<font resource="font_s"/>
-				<placement x="700" y="1600" placement="6"/>
+				<placement x="700" y="1600" placement="5"/>
 				<text>Only for S4 jflte</text>
 			</text>
 		</page>
