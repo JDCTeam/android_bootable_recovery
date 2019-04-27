@@ -49,6 +49,12 @@
 			<font resource="font_m" color="%text_button_color%"/>
 			<image resource="main_button_half_height_full_width"/>
 		</style>
+		
+		<style name="unlock_button">
+			<highlight color="%highlight_color%"/>
+			<font resource="font_m" color="%text_button_color%"/>
+			<image resource="unlock_button"/>
+		</style>
 
 		<style name="button_third_width">
 			<highlight color="%highlight_color%"/>
@@ -3701,11 +3707,11 @@
 		<page name="lock">
 			<background color="%total_black%"/>
 
-			<slider>
-				<text>{@swipe_to_unlock=Swipe to Unlock}</text>
-				<placement x="%center_x%" y="%row11_y%" placement="4"/>
+			<button style="unlock_button">
+				<text>{@swipe_to_unlock=Press to Unlock}</text>
 				<action function="overlay"/>
-			</slider>
+				<placement x="%center_x%" y="%row25_y%" placement="4"/>
+			</button>
 
 			<action>
 				<touch key="power"/>

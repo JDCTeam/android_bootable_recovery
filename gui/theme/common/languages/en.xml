@@ -424,7 +424,7 @@
 		<string name="dumlock_install_confirm">Install HTC dumlock files to ROM?</string>
 		<string name="dumlock_installing">Installing HTC Dumlock...</string>
 		<string name="dumlock_install_complete">HTC Dumlock Install Complete</string>
-		<string name="swipe_to_unlock">Swipe to Unlock</string>
+		<string name="swipe_to_unlock">Press to Unlock</string>
 		<string name="swipe_unlock">   Unlock</string>
 		<string name="fm_hdr">File Manager</string>
 		<string name="fm_sel_file">Select a File or Folder</string>
