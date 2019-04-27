@@ -3795,15 +3795,11 @@
 		</page>
 
 		<page name="lock">
-			<background color="%semi_transparent%"/>
-
-			<image>
-				<image resource="unlock_icon"/>
-				<placement x="%center_x%" y="%row10_y%" placement="4"/>
-			</image>
+			<background color="%total_black%"/>
 
 			<slider>
 				<text>{@swipe_to_unlock=Swipe to Unlock}</text>
+				<placement x="%center_x%" y="%row11_y%" placement="4"/>
 				<action function="overlay"/>
 			</slider>
 

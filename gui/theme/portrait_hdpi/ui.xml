@@ -185,6 +185,7 @@
 		<variable name="caps_highlight_color" value="#22222280"/>
 		<variable name="transparent" value="#00000000"/>
 		<variable name="semi_transparent" value="#00000099"/>
+		<variable name="total_black" value="#000000" />
 		<variable name="warning" value="#F8F8A0"/>
 		<variable name="error" value="#FF0101"/>
 		<variable name="highlight" value="#0090CA"/>
