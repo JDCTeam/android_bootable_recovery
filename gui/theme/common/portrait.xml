@@ -175,7 +175,7 @@
 
 			<text style="text_l">
 				<placement x="%col1_x_header%" y="%row3_header_y%"/>
-				<text>{@twrp_header=TWRP by JDCTeam}</text>
+				<text>{@twrp_header=TWRP by JDCTeam - Build 2}</text>
 			</text>
 
 			<text style="text_m">

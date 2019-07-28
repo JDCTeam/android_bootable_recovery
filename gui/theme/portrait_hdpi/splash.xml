@@ -45,7 +45,7 @@
 			<text color="%accent_color%">
 				<font resource="font_l"/>
 				<placement x="540" y="1500" placement="5"/>
-				<text>TWRP %tw_version% by JDCTeam</text>
+				<text>TWRP %tw_version% by JDCTeam - Build 2</text>
 			</text>
 			<text color="%disclaimer_color%">
 				<font resource="font_s"/>
